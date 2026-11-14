@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d0b">
+<meta name="description" content="Novix Proxy - Free Telegram MTProto Proxy List">
+<title>Novix Proxy | MTProto</title>
+
+<style>
+:root {
+  --bg: #080d0b;
+  --panel: #101a15;
+  --green: #27e889;
+  --muted: #91a49a;
+  --border: #20352a;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #f1fff6;
+  font-family: Arial, sans-serif;
+}
+header {
+  padding: 22px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+.logo { font-size: 23px; font-weight: 800; }
+.logo span { color: var(--green); }
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 22px;
+  font-size: 14px;
+}
+main {
+  max-width: 1050px;
+  margin: auto;
+  padding: 65px 22px;
+}
+.hero { text-align: center; }
+.tag {
+  display: inline-block;
+  color: var(--green);
+  border: 1px solid var(--border);
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-size: 12px;
+}
+h1 { font-size: clamp(35px, 7vw, 60px); margin: 24px 0 12px; }
+h1 span { color: var(--green); }
+.subtitle { color: var(--muted); line-height: 1.8; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 45px 0;
+}
+.card, .proxy-box {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+}
+.number { font-size: 30px; color: var(--green); font-weight: bold; }
+.card p { color: var(--muted); margin-bottom: 0; font-size: 13px; }
+.proxy-box h2 { margin-top: 0; }
+.empty {
+  text-align: center;
+  padding: 35px 10px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.status {
+  display: inline-block;
+  color: var(--green);
+  border: 1px solid var(--border);
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+footer {
+  text-align: center;
+  padding: 30px 15px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+}
+footer span { color: var(--green); }
+@media(max-width:600px) {
+  header { padding: 18px; }
+  nav a { margin-left: 10px; font-size: 12px; }
+  .stats { grid-template-columns: 1fr; }
+  main { padding-top: 45px; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="logo">NOVIX<span>PROXY</span></div>
+  <nav>
+    <a href="#proxies">Proxies</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="tag">● TELEGRAM MTProto NETWORK</div>
+    <h1>Stay <span>Connected.</span></h1>
+    <p class="subtitle">
+      Free Telegram MTProto Proxy List<br>
+      Automated monitoring · Regular updates · One-click connection
+    </p>
+  </section>
+
+  <section class="stats">
+    <div class="card">
+      <div class="number" id="active">0</div>
+      <p>Active Proxies</p>
+    </div>
+    <div class="card">
+      <div class="number">0</div>
+      <p>Countries</p>
+    </div>
+    <div class="card">
+      <div class="number">—</div>
+      <p>Last Update</p>
+    </div>
+  </section>
+
+  <section class="proxy-box" id="proxies">
+    <h2>🌐 Proxy List</h2>
+    <span class="status">Monitoring setup pending</span>
+    <div class="empty">
+      <h3>No proxies published yet</h3>
+      Proxy availability monitoring is being configured.<br>
+      Please check back later.
+    </div>
+  </section>
+
+  <section id="about" style="text-align:center;padding:45px 10px">
+    <h2>About Novix Proxy</h2>
+    <p class="subtitle">
+      An open-source project providing regularly monitored
+      Telegram MTProto proxy lists.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 <span>Novix Proxy</span> · Open Source Project</p>
+  <p>Powered by Novix</p>
+</footer>
+</body>
+</html>
