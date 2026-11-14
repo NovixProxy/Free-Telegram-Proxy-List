@@ -158,5 +158,45 @@ footer span { color: var(--green); }
   <p>© 2026 <span>Novix Proxy</span> · Open Source Project</p>
   <p>Powered by Novix</p>
 </footer>
+  <script>
+async function loadProxies() {
+  try {
+    const response = await fetch('./proxies.json');
+
+    if (!response.ok) {
+      throw new Error('Failed to load proxies');
+    }
+
+    const data = await response.json();
+
+    console.log('Novix Proxy data:', data);
+
+    const container = document.getElementById('proxy-list');
+
+    if (!container) return;
+
+    if (!data.proxies || data.proxies.length === 0) {
+      container.innerHTML = `
+        <p>No proxies available at the moment.</p>
+      `;
+      return;
+    }
+
+    container.innerHTML = data.proxies.map(proxy => `
+      <div class="proxy-card">
+        <h3>${proxy.name || proxy.domain}</h3>
+        <p>Country: ${proxy.country || 'Unknown'}</p>
+        <p>Domain: ${proxy.domain}</p>
+        <p>Port: ${proxy.port || 443}</p>
+      </div>
+    `).join('');
+
+  } catch (error) {
+    console.error('Novix Proxy error:', error);
+  }
+}
+
+loadProxies();
+  </script>
 </body>
 </html>
