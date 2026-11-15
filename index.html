@@ -84,7 +84,13 @@ h1 span { color: var(--green); }
   gap: 15px;
   margin: 45px 0;
 }
-.card, .proxy-box {
+.card {
+  .proxy-box {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  }
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 14px;
@@ -115,12 +121,61 @@ h1 span { color: var(--green); }
 }
 
 .proxy-card {
-  background: #0b130f;
+  background: linear-gradient(135deg, #252F39, #11171E, #202A34);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 20px;
 }
+@property --neon-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
 
+.proxy-card {
+  position: relative;
+  isolation: isolate;
+}
+
+.proxy-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  padding: 2px;
+  border-radius: 14px;
+  background: conic-gradient(
+    from var(--neon-angle),
+    transparent 0%,
+    transparent 72%,
+    #27e889 82%,
+    #b5ffda 86%,
+    #27e889 90%,
+    transparent 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  filter: drop-shadow(0 0 5px #27e889);
+  animation: neonRotate 6s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.proxy-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes neonRotate {
+  to {
+    --neon-angle: 360deg;
+  }
+}
 .proxy-card h3 {
   margin-top: 0;
 }
