@@ -378,5 +378,77 @@ status.textContent =
 
 loadProxies();
   </script>
+  
+<script>
+const translations = {
+  en: {
+    nav_proxies: "Proxies",
+    nav_about: "About",
+    hero_tag: "● TELEGRAM WEB PROXY NETWORK",
+    hero_title: 'Stay <span>Connected.</span>',
+    hero_subtitle: "Free Telegram Web Proxy Directory<br>Discover public proxies with automated HTTPS checks, country details, and one-click Telegram connection.",
+    countries: "Countries",
+    proxy_list: "🌐 Proxy List",
+    monitor_connected: "Proxy data connected",
+    about_title: "About Novix Proxy",
+    about_text: "An open-source directory of Telegram Web Proxy links, featuring automated HTTPS endpoint monitoring, country details, and one-click Telegram connection.",
+    footer_copyright: '© 2026 <span>Novix Proxy</span> · Open Source Project',
+    footer_powered: "Powered by Novix"
+  },
+  fa: {
+    nav_proxies: "پروکسی‌ها",
+    nav_about: "درباره ما",
+    hero_tag: "● شبکه پروکسی وب تلگرام",
+    hero_title: 'همیشه <span>متصل بمانید.</span>',
+    hero_subtitle: "فهرست رایگان پروکسی‌های وب تلگرام<br>پروکسی‌های عمومی را با بررسی خودکار HTTPS، اطلاعات کشور و اتصال مستقیم به تلگرام پیدا کنید.",
+    countries: "کشورها",
+    proxy_list: "🌐 فهرست پروکسی‌ها",
+    monitor_connected: "اطلاعات پروکسی دریافت شد",
+    about_title: "درباره نوویکس پروکسی",
+    about_text: "یک فهرست متن‌باز از لینک‌های پروکسی وب تلگرام، همراه با پایش خودکار HTTPS، اطلاعات کشور و امکان اتصال مستقیم به تلگرام.",
+    footer_copyright: '© ۲۰۲۶ <span>Novix Proxy</span> · پروژه متن‌باز',
+    footer_powered: "ارائه‌شده توسط نوویکس"
+  },
+  ru: {
+    nav_proxies: "Прокси",
+    nav_about: "О проекте",
+    hero_tag: "● СЕТЬ ВЕБ-ПРОКСИ TELEGRAM",
+    hero_title: 'Оставайтесь <span>на связи.</span>',
+    hero_subtitle: "Бесплатный каталог веб-прокси Telegram<br>Находите публичные прокси с автоматической проверкой HTTPS, информацией о стране и подключением к Telegram в один клик.",
+    countries: "Страны",
+    proxy_list: "🌐 Список прокси",
+    monitor_connected: "Данные прокси загружены",
+    about_title: "О Novix Proxy",
+    about_text: "Открытый каталог ссылок на веб-прокси Telegram с автоматической проверкой HTTPS, информацией о странах и подключением к Telegram в один клик.",
+    footer_copyright: '© 2026 <span>Novix Proxy</span> · Открытый проект',
+    footer_powered: "При поддержке Novix"
+  }
+};
+
+const languageSelector = document.getElementById("language-selector");
+
+function setLanguage(language) {
+  const selected = translations[language] ? language : "en";
+
+  document.documentElement.lang = selected;
+  document.documentElement.dir = selected === "fa" ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-i18n]").forEach(element => {
+    const key = element.dataset.i18n;
+    if (translations[selected][key]) {
+      element.innerHTML = translations[selected][key];
+    }
+  });
+
+  languageSelector.value = selected;
+}
+
+languageSelector.addEventListener("change", event => {
+  setLanguage(event.target.value);
+});
+
+setLanguage("en");
+</script>
+
 </body>
 </html>
