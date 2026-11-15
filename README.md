@@ -10,9 +10,7 @@
     <img src="novix-proxy-banner.png" alt="Novix Proxy - Free Telegram Proxy Directory" width="100%">
   </a>
 </p>
-
 <br>
-
 <p align="center">
   <strong>Free Telegram Web Proxy Directory</strong>
   <br>
