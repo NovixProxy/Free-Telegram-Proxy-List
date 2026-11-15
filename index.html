@@ -358,9 +358,9 @@ proxies.sort((a, b) => {
     document.getElementById('countries').textContent = countries.size;
 
     document.getElementById('last-update').textContent =
-      data.updated_at
-        ? new Date(data.updated_at).toLocaleString()
-        : '—';
+  data.updated_at
+    ? new Date(data.updated_at).toISOString().replace('T', ' | ').replace(/\.\d{3}Z$/, ' UTC')
+    : '—';
 
     list.replaceChildren();
 
