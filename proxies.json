@@ -1,4 +1,14 @@
 {
-  "updated_at": null,
-  "proxies": []
+  "updated_at": "2026-11-15T00:00:00Z",
+  "proxies": [
+    {
+      "id": "test-001",
+      "name": "Novix Test Proxy",
+      "domain": "example.com",
+      "port": 443,
+      "country": "Germany",
+      "status": "online",
+      "latency_ms": 85
+    }
+  ]
 }
