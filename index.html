@@ -84,6 +84,55 @@ h1 span { color: var(--green); }
   border-radius: 20px;
   font-size: 12px;
 }
+  .proxy-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 22px;
+}
+
+.proxy-card {
+  background: #0b130f;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.proxy-card h3 {
+  margin-top: 0;
+}
+
+.proxy-card p {
+  color: var(--muted);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.connect-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--green);
+  color: #06120b;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.status.offline {
+  color: #ff7777;
+}
+
+.status.unknown {
+  color: #e9c46a;
+}
+
+@media(max-width:600px) {
+  .proxy-list {
+    grid-template-columns: 1fr;
+  }
+}
 footer {
   text-align: center;
   padding: 30px 15px;
@@ -121,28 +170,32 @@ footer span { color: var(--green); }
   </section>
 
   <section class="stats">
-    <div class="card">
-      <div class="number" id="active">0</div>
-      <p>Active Proxies</p>
-    </div>
-    <div class="card">
-      <div class="number">0</div>
-      <p>Countries</p>
-    </div>
-    <div class="card">
-      <div class="number">—</div>
-      <p>Last Update</p>
-    </div>
+  <div class="card">
+    <div class="number" id="active">0</div>
+    <p>Active Proxies</p>
+  </div>
+  <div class="card">
+    <div class="number" id="countries">0</div>
+    <p>Countries</p>
+  </div>
+  <div class="card">
+    <div class="number" id="last-update">—</div>
+    <p>Last Update</p>
+  </div>
   </section>
 
   <section class="proxy-box" id="proxies">
-    <h2>🌐 Proxy List</h2>
-    <span class="status">Proxy data connected</span>
-    <div id="proxy-list" class="empty">
-  <h3>No proxies published yet</h3>
-  Proxy availability monitoring is being configured.<br>
-  Please check back later.
+  <h2>🌐 Proxy List</h2>
+  <span class="status unknown" id="monitor-status">
+    Proxy data connected
+  </span>
+
+  <div id="proxy-list" class="proxy-list">
+    <div class="empty">
+      <h3>No proxies published yet</h3>
+      Please check back later.
     </div>
+  </div>
   </section>
 
   <section id="about" style="text-align:center;padding:45px 10px">
@@ -160,39 +213,112 @@ footer span { color: var(--green); }
 </footer>
   <script>
 async function loadProxies() {
+  const list = document.getElementById('proxy-list');
+  const monitor = document.getElementById('monitor-status');
+
   try {
     const response = await fetch('./proxies.json');
 
     if (!response.ok) {
-      throw new Error('Failed to load proxies');
+      throw new Error('Failed to load proxies.json');
     }
 
     const data = await response.json();
+    const proxies = Array.isArray(data.proxies) ? data.proxies : [];
 
-    console.log('Novix Proxy data:', data);
+    const active = proxies.filter(p => p.status === 'online').length;
+    const countries = new Set(
+      proxies.map(p => p.country).filter(Boolean)
+    );
 
-    const container = document.getElementById('proxy-list');
+    document.getElementById('active').textContent = active;
+    document.getElementById('countries').textContent = countries.size;
 
-    if (!container) return;
+    document.getElementById('last-update').textContent =
+      data.updated_at
+        ? new Date(data.updated_at).toLocaleString()
+        : '—';
 
-    if (!data.proxies || data.proxies.length === 0) {
-      container.innerHTML = `
-        <p>No proxies available at the moment.</p>
-      `;
+    list.replaceChildren();
+
+    if (proxies.length === 0) {
+      const empty = document.createElement('div');
+      empty.className = 'empty';
+      empty.textContent = 'No proxies published yet. Please check back later.';
+      list.appendChild(empty);
+
+      monitor.textContent = 'Waiting for proxies';
+      monitor.className = 'status unknown';
       return;
     }
 
-    container.innerHTML = data.proxies.map(proxy => `
-      <div class="proxy-card">
-        <h3>${proxy.name || proxy.domain}</h3>
-        <p>Country: ${proxy.country || 'Unknown'}</p>
-        <p>Domain: ${proxy.domain}</p>
-        <p>Port: ${proxy.port || 443}</p>
-      </div>
-    `).join('');
+    proxies.forEach(proxy => {
+      const card = document.createElement('div');
+      card.className = 'proxy-card';
+
+      const title = document.createElement('h3');
+      title.textContent = proxy.name || proxy.domain || 'Novix Proxy';
+
+      const details = [
+        'Country: ' + (proxy.country || 'Unknown'),
+        'Domain: ' + (proxy.domain || 'Unknown'),
+        'Port: ' + (proxy.port || 443),
+        'Latency: ' + (proxy.latency_ms != null
+          ? proxy.latency_ms + ' ms'
+          : 'Unknown')
+      ];
+
+      card.appendChild(title);
+
+      details.forEach(item => {
+        const p = document.createElement('p');
+        p.textContent = item;
+        card.appendChild(p);
+      });
+
+      const status = document.createElement('span');
+      status.className = 'status ' +
+        (proxy.status === 'online' ? '' :
+         proxy.status === 'offline' ? 'offline' : 'unknown');
+
+      status.textContent =
+        proxy.status === 'online' ? 'Online' :
+        proxy.status === 'offline' ? 'Offline' : 'Unknown';
+
+      card.appendChild(status);
+
+      if (proxy.connect_url) {
+        try {
+          const url = new URL(proxy.connect_url);
+
+          if (
+            url.protocol === 'https:' &&
+            url.hostname === 't.me' &&
+            url.pathname === '/webproxy'
+          ) {
+            const button = document.createElement('a');
+            button.href = url.href;
+            button.className = 'connect-btn';
+            button.textContent = 'Connect to Telegram';
+            button.target = '_blank';
+            button.rel = 'noopener noreferrer';
+            card.appendChild(button);
+          }
+        } catch (error) {
+          console.warn('Invalid connection URL');
+        }
+      }
+
+      list.appendChild(card);
+    });
+
+    monitor.textContent = 'Proxy data loaded';
+    monitor.className = 'status';
 
   } catch (error) {
-    console.error('Novix Proxy error:', error);
+    console.error('Novix Proxy:', error);
+    monitor.textContent = 'Data loading failed';
+    monitor.className = 'status offline';
   }
 }
 
