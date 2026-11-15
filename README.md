@@ -25,18 +25,17 @@ Novix Proxy is an open-source directory of public Telegram Web Proxy links, desi
 - One-click Telegram connection
 - Country-based proxy organization
 - Connection status and latency display
-- Multi-language interface (English, فارسی, Русский)
 - Dynamic pinned proxy ordering
 
 ## 🌍 Supported Languages
 
-English · فارسی · Русский
+🇬🇧 English · 🇷🇺 Русский · 🇮🇷 فارسی
 
 ## 🔗 Live Website
 
-**Explore Novix Proxy:**
+Explore Novix Proxy:
 
-https://novixproxy.github.io/MTProto/
+> 🌐 **https://novixproxy.github.io/MTProto/**
 
 ## 🛠️ Technology
 
