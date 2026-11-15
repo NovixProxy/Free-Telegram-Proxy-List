@@ -128,7 +128,21 @@ h1 span { color: var(--green); }
 .status.unknown {
   color: #e9c46a;
 }
+#language-selector {
+  background: var(--panel);
+  color: var(--green);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  outline: none;
+}
 
+#language-selector option {
+  background: var(--panel);
+  color: #f1fff6;
+}
 @media(max-width:600px) {
   .proxy-list {
     grid-template-columns: 1fr;
@@ -163,8 +177,13 @@ footer span { color: var(--green); }
 <header>
   <div class="logo">NOVIX<span>PROXY</span></div>
   <nav>
-    <a href="#proxies">Proxies</a>
-    <a href="#about">About</a>
+  <a href="#proxies">Proxies</a>
+  <a href="#about">About</a>
+  <select id="language-selector" aria-label="Select language">
+    <option value="en">🇬🇧 EN</option>
+    <option value="fa">🇮🇷 فارسی</option>
+    <option value="ru">🇷🇺 RU</option>
+  </select>
   </nav>
 </header>
 
@@ -210,8 +229,9 @@ footer span { color: var(--green); }
   <section id="about" style="text-align:center;padding:45px 10px">
     <h2>About Novix Proxy</h2>
     <p class="subtitle">
-      An open-source project providing regularly monitored
-      Telegram MTProto proxy lists.
+  An open-source directory of Telegram Web Proxy links,
+  featuring automated HTTPS endpoint monitoring,
+  country details, and one-click Telegram connection.
     </p>
   </section>
 </main>
