@@ -3,7 +3,7 @@
 
 🌏 پروکسی رایگان تلگرام
 
-🌏 Бесплатные прокси для Telegram
+🌏 Бесплатные прокси для Телеграма
 
 <p align="center">
   <a href="https://novixproxy.github.io/Free-Telegram-Proxy-List/">
