@@ -1,4 +1,13 @@
 {
-  "updated_at": "2026-11-15T00:12:06.087208+00:00",
-  "proxies": []
+  "updated_at": null,
+  "proxies": [
+    {
+      "id": "novix-web-001",
+      "name": "Novix Germany",
+      "domain": "daneshnameh.blog",
+      "port": 443,
+      "country": "Germany",
+      "status": "unknown"
+    }
+  ]
 }
