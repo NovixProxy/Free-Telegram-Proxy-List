@@ -357,10 +357,14 @@ proxies.sort((a, b) => {
     document.getElementById('active').textContent = active;
     document.getElementById('countries').textContent = countries.size;
 
-    document.getElementById('last-update').textContent =
-  data.updated_at
-    ? new Date(data.updated_at).toISOString().replace('T', ' | ').replace(/\.\d{3}Z$/, ' UTC')
-    : '—';
+    const updateDate = data.updated_at
+  ? new Date(data.updated_at)
+  : null;
+
+document.getElementById('last-update').innerHTML = updateDate
+  ? `<div style="font-size: 18px; font-weight: 600;">${updateDate.toISOString().slice(11, 19)} UTC</div>
+     <div style="font-size: 11px; opacity: 0.7; margin-top: 4px;">${updateDate.toISOString().slice(0, 10)}</div>`
+  : '—';
 
     list.replaceChildren();
 
