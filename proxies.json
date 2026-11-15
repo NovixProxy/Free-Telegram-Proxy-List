@@ -1,5 +1,5 @@
 {
-  "updated_at": null,
+  "updated_at": "2026-11-15T00:43:02.706314+00:00",
   "proxies": [
     {
       "id": "novix-web-001",
@@ -8,7 +8,12 @@
       "port": 443,
       "country": "Germany",
       "status": "unknown",
-      "connect_url": "https://t.me/webproxy?server=daneshnameh.blog&secret=dd50500cb61b6a100b0ea003d2094f28b6"
+      "connect_url": "https://t.me/webproxy?server=daneshnameh.blog&secret=dd50500cb61b6a100b0ea003d2094f28b6",
+      "endpoint_status": "online",
+      "tls_valid": true,
+      "http_status": 200,
+      "latency_ms": 808,
+      "checked_at": "2026-11-15T00:43:01.897854+00:00"
     }
   ]
 }
