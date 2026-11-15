@@ -177,8 +177,8 @@ footer span { color: var(--green); }
 <header>
   <div class="logo">NOVIX<span>PROXY</span></div>
   <nav>
-  <a href="#proxies">Proxies</a>
-  <a href="#about">About</a>
+  <a href="#proxies" data-i18n="nav_proxies">Proxies</a>
+<a href="#about" data-i18n="nav_about">About</a>
   <select id="language-selector" aria-label="Select language">
     <option value="en">🇬🇧 EN</option>
     <option value="fa">🇮🇷 فارسی</option>
@@ -189,9 +189,9 @@ footer span { color: var(--green); }
 
 <main>
   <section class="hero">
-    <div class="tag">● TELEGRAM WEB PROXY NETWORK</div>
-    <h1>Stay <span>Connected.</span></h1>
-    <p class="subtitle">
+    <div class="tag" data-i18n="hero_tag">● TELEGRAM WEB PROXY NETWORK</div>
+    <h1 data-i18n="hero_title">Stay <span>Connected.</span></h1>
+    <p class="subtitle" data-i18n="hero_subtitle">
   Free Telegram Web Proxy Directory<br>
   Discover public proxies with automated HTTPS checks, country details, and one-click Telegram connection.
     </p>
@@ -204,7 +204,7 @@ footer span { color: var(--green); }
   </div>
   <div class="card">
     <div class="number" id="countries">0</div>
-    <p>Countries</p>
+    <p data-i18n="countries">Countries</p>
   </div>
   <div class="card">
     <div class="number" id="last-update">—</div>
@@ -213,9 +213,9 @@ footer span { color: var(--green); }
   </section>
 
   <section class="proxy-box" id="proxies">
-  <h2>🌐 Proxy List</h2>
-  <span class="status unknown" id="monitor-status">
-    Proxy data connected
+  <h2 data-i18n="proxy_list">🌐 Proxy List</h2>
+  <span class="status unknown" id="monitor-status" data-i18n="monitor_connected">
+  Proxy data connected
   </span>
 
   <div id="proxy-list" class="proxy-list">
@@ -227,8 +227,8 @@ footer span { color: var(--green); }
   </section>
 
   <section id="about" style="text-align:center;padding:45px 10px">
-    <h2>About Novix Proxy</h2>
-    <p class="subtitle">
+    <h2 data-i18n="about_title">About Novix Proxy</h2>
+    <p class="subtitle" data-i18n="about_text">
   An open-source directory of Telegram Web Proxy links,
   featuring automated HTTPS endpoint monitoring,
   country details, and one-click Telegram connection.
@@ -237,8 +237,8 @@ footer span { color: var(--green); }
 </main>
 
 <footer>
-  <p>© 2026 <span>Novix Proxy</span> · Open Source Project</p>
-  <p>Powered by Novix</p>
+  <p data-i18n="footer_copyright">© 2026 <span>Novix Proxy</span> · Open Source Project</p>
+<p data-i18n="footer_powered">Powered by Novix</p>
 </footer>
   <script>
 async function loadProxies() {
