@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://novixproxy.github.io/Free-Telegram-Proxy-List/">
-    <img src="novix-banner.png" alt="Novix Proxy - Free Telegram Proxy Directory" width="100%">
+    <img src="novix-proxy-banner.png" alt="Novix Proxy - Free Telegram Proxy Directory" width="100%">
   </a>
 </p>
 
