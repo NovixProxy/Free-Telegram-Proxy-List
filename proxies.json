@@ -1,5 +1,5 @@
 {
-  "updated_at": null,
+  "updated_at": "2026-11-15T00:19:45.378456+00:00",
   "proxies": [
     {
       "id": "novix-web-001",
@@ -7,7 +7,12 @@
       "domain": "daneshnameh.blog",
       "port": 443,
       "country": "Germany",
-      "status": "unknown"
+      "status": "unknown",
+      "endpoint_status": "online",
+      "tls_valid": true,
+      "http_status": 200,
+      "latency_ms": 615,
+      "checked_at": "2026-11-15T00:19:44.763054+00:00"
     }
   ]
 }
