@@ -1,5 +1,5 @@
 {
-  "updated_at": null,
+  "updated_at": "2026-11-15T00:53:21.569686+00:00",
   "proxies": [
     {
       "id": "novix-de-01",
@@ -10,7 +10,12 @@
       "status": "unknown",
       "pinned": true,
       "pin_order": 1,
-      "connect_url": "https://t.me/webproxy?server=daneshnameh.blog&secret=dd50500cb61b6a100b0ea003d2094f28b6"
+      "connect_url": "https://t.me/webproxy?server=daneshnameh.blog&secret=dd50500cb61b6a100b0ea003d2094f28b6",
+      "endpoint_status": "online",
+      "tls_valid": true,
+      "http_status": 200,
+      "latency_ms": 706,
+      "checked_at": "2026-11-15T00:53:19.455781+00:00"
     },
     {
       "id": "novix-de-02",
@@ -21,7 +26,12 @@
       "status": "unknown",
       "pinned": true,
       "pin_order": 2,
-      "connect_url": "https://t.me/webproxy?server=honarnameh.blog&secret=dd22956b07c888da0aeca25c1b7d805263"
+      "connect_url": "https://t.me/webproxy?server=honarnameh.blog&secret=dd22956b07c888da0aeca25c1b7d805263",
+      "endpoint_status": "online",
+      "tls_valid": true,
+      "http_status": 200,
+      "latency_ms": 424,
+      "checked_at": "2026-11-15T00:53:20.162014+00:00"
     },
     {
       "id": "novix-de-03",
@@ -32,7 +42,12 @@
       "status": "unknown",
       "pinned": true,
       "pin_order": 3,
-      "connect_url": "https://t.me/webproxy?server=novixproxy.shop&secret=dd079866e9733cca4006f91be7aaf62f95"
+      "connect_url": "https://t.me/webproxy?server=novixproxy.shop&secret=dd079866e9733cca4006f91be7aaf62f95",
+      "endpoint_status": "online",
+      "tls_valid": true,
+      "http_status": 200,
+      "latency_ms": 450,
+      "checked_at": "2026-11-15T00:53:20.586331+00:00"
     },
     {
       "id": "novix-de-04",
@@ -43,7 +58,12 @@
       "status": "unknown",
       "pinned": true,
       "pin_order": 4,
-      "connect_url": "https://t.me/webproxy?server=ketabkadeh.shop&secret=dd16ef59d9f5670307d8bf5074a8944e94"
+      "connect_url": "https://t.me/webproxy?server=ketabkadeh.shop&secret=dd16ef59d9f5670307d8bf5074a8944e94",
+      "endpoint_status": "online",
+      "tls_valid": true,
+      "http_status": 200,
+      "latency_ms": 531,
+      "checked_at": "2026-11-15T00:53:21.037486+00:00"
     }
   ]
 }
