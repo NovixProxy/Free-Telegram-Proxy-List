@@ -21,9 +21,30 @@
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  background: var(--bg);
+  background: linear-gradient(
+    125deg,
+    #080B0E,
+    #151B21,
+    #0B1117,
+    #1C242C,
+    #080B0E
+  );
+  background-size: 400% 400%;
+  animation: titaniumFlow 18s ease infinite;
   color: #f1fff6;
   font-family: Arial, sans-serif;
+}
+
+@keyframes titaniumFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 header {
   padding: 22px 7%;
