@@ -1,19 +1,49 @@
 {
-  "updated_at": "2026-11-15T00:43:02.706314+00:00",
+  "updated_at": null,
   "proxies": [
     {
-      "id": "novix-web-001",
-      "name": "Novix Germany",
+      "id": "novix-de-01",
+      "name": "Novix Germany 01",
       "domain": "daneshnameh.blog",
       "port": 443,
       "country": "Germany",
       "status": "unknown",
-      "connect_url": "https://t.me/webproxy?server=daneshnameh.blog&secret=dd50500cb61b6a100b0ea003d2094f28b6",
-      "endpoint_status": "online",
-      "tls_valid": true,
-      "http_status": 200,
-      "latency_ms": 808,
-      "checked_at": "2026-11-15T00:43:01.897854+00:00"
+      "pinned": true,
+      "pin_order": 1,
+      "connect_url": "https://t.me/webproxy?server=daneshnameh.blog&secret=dd50500cb61b6a100b0ea003d2094f28b6"
+    },
+    {
+      "id": "novix-de-02",
+      "name": "Novix Germany 02",
+      "domain": "honarnameh.blog",
+      "port": 443,
+      "country": "Germany",
+      "status": "unknown",
+      "pinned": true,
+      "pin_order": 2,
+      "connect_url": "https://t.me/webproxy?server=honarnameh.blog&secret=dd22956b07c888da0aeca25c1b7d805263"
+    },
+    {
+      "id": "novix-de-03",
+      "name": "Novix Germany 03",
+      "domain": "novixproxy.shop",
+      "port": 443,
+      "country": "Germany",
+      "status": "unknown",
+      "pinned": true,
+      "pin_order": 3,
+      "connect_url": "https://t.me/webproxy?server=novixproxy.shop&secret=dd079866e9733cca4006f91be7aaf62f95"
+    },
+    {
+      "id": "novix-de-04",
+      "name": "Novix Germany 04",
+      "domain": "ketabkadeh.shop",
+      "port": 443,
+      "country": "Germany",
+      "status": "unknown",
+      "pinned": true,
+      "pin_order": 4,
+      "connect_url": "https://t.me/webproxy?server=ketabkadeh.shop&secret=dd16ef59d9f5670307d8bf5074a8944e94"
     }
   ]
 }
