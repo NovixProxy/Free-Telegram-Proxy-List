@@ -1,4 +1,4 @@
-# 🚀 Novix Proxy
+# 🚀 Novix Proxy | پروکسی رایگان تلگرام 🌏
 
 <p align="center">
   <a href="https://novixproxy.github.io/Free-Telegram-Proxy-List/">
@@ -37,15 +37,21 @@ Novix Proxy is an open-source directory of free Telegram Web Proxy links, helpin
 - Connection status and latency display
 - Dynamic pinned proxy ordering
 
+---
+
 ## 🌍 Supported Languages
 
 🇬🇧 English · 🇷🇺 Русский · 🇮🇷 فارسی
+
+---
 
 ## 🔗 Live Website
 
 Explore Novix Proxy:
 
 > 🌐 **[VIEW FREE TELEGRAM PROXY LIST](https://novixproxy.github.io/Free-Telegram-Proxy-List/)**
+
+---
 
 ## 🛠️ Technology
 
@@ -55,6 +61,8 @@ Explore Novix Proxy:
 - Python
 - GitHub Actions
 - JSON
+
+---
 
 ## 📜 License
 
