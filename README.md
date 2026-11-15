@@ -1,4 +1,5 @@
-# 🚀 Novix Proxy | پروکسی رایگان تلگرام 🌏
+# 🚀 Novix Proxy
+🌏 پروکسی رایگان تلگرام | نوویکس پروکسی
 
 <p align="center">
   <a href="https://novixproxy.github.io/Free-Telegram-Proxy-List/">
