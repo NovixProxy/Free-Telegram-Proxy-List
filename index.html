@@ -147,6 +147,14 @@ footer span { color: var(--green); }
   .stats { grid-template-columns: 1fr; }
   main { padding-top: 45px; }
 }
+  .pin-badge {
+  display: inline-block;
+  margin-left: 8px;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: bold;
+  vertical-align: middle;
+  }
 </style>
 </head>
 
@@ -226,6 +234,21 @@ async function loadProxies() {
     const data = await response.json();
     const proxies = Array.isArray(data.proxies) ? data.proxies : [];
 
+proxies.sort((a, b) => {
+  const aPinned = a.pinned === true;
+  const bPinned = b.pinned === true;
+
+  if (aPinned && !bPinned) return -1;
+  if (!aPinned && bPinned) return 1;
+
+  if (aPinned && bPinned) {
+    return (Number(a.pin_order) || 9999) -
+           (Number(b.pin_order) || 9999);
+  }
+
+  return 0;
+});
+
     const active = proxies.filter(
   p => p.endpoint_status === 'online'
 ).length;
@@ -260,7 +283,12 @@ async function loadProxies() {
 
       const title = document.createElement('h3');
       title.textContent = proxy.name || proxy.domain || 'Novix Proxy';
-
+if (proxy.pinned === true) {
+  const pin = document.createElement('span');
+  pin.className = 'pin-badge';
+  pin.textContent = ' 📌 PINNED';
+  title.appendChild(pin);
+}
       const details = [
         'Country: ' + (proxy.country || 'Unknown'),
         'Domain: ' + (proxy.domain || 'Unknown'),
