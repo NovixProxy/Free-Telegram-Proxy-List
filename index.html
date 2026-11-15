@@ -226,7 +226,9 @@ async function loadProxies() {
     const data = await response.json();
     const proxies = Array.isArray(data.proxies) ? data.proxies : [];
 
-    const active = proxies.filter(p => p.status === 'online').length;
+    const active = proxies.filter(
+  p => p.endpoint_status === 'online'
+).length;
     const countries = new Set(
       proxies.map(p => p.country).filter(Boolean)
     );
@@ -276,15 +278,18 @@ async function loadProxies() {
         card.appendChild(p);
       });
 
-      const status = document.createElement('span');
-      status.className = 'status ' +
-        (proxy.status === 'online' ? '' :
-         proxy.status === 'offline' ? 'offline' : 'unknown');
+      const endpointStatus = proxy.endpoint_status || 'unknown';
 
-      status.textContent =
-        proxy.status === 'online' ? 'Online' :
-        proxy.status === 'offline' ? 'Offline' : 'Unknown';
+const status = document.createElement('span');
 
+status.className = 'status ' +
+  (endpointStatus === 'online' ? '' :
+   endpointStatus === 'offline' ? 'offline' : 'unknown');
+
+status.textContent =
+  endpointStatus === 'online' ? 'HTTPS Online' :
+  endpointStatus === 'offline' ? 'HTTPS Offline' :
+  'Not Checked';
       card.appendChild(status);
 
       if (proxy.connect_url) {
