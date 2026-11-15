@@ -1,6 +1,14 @@
 # 🚀 Novix Proxy
 
 <p align="center">
+  <a href="https://novixproxy.github.io/MTProto/">
+    <img src="novix-banner.png" alt="Novix Proxy - Telegram Web Proxy Directory" width="100%">
+  </a>
+</p>
+
+<br>
+
+<p align="center">
   <strong>Free Telegram Web Proxy Directory</strong>
   <br>
   Automated Monitoring · Multiple Countries · One-Click Connection
