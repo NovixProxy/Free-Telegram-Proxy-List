@@ -43,7 +43,7 @@ Novix Proxy is an open-source directory of free Telegram Web Proxy links, helpin
 
 Explore Novix Proxy:
 
-> 🌐 **[OPEN LIVE WEBSITE](https://novixproxy.github.io/Free-Telegram-Proxy-List/)**
+> 🌐 **[VIEW FREE TELEGRAM PROXY LIST](https://novixproxy.github.io/Free-Telegram-Proxy-List/)**
 
 ## 🛠️ Technology
 
