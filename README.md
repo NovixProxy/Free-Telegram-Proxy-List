@@ -1,8 +1,8 @@
 # 🚀 Novix Proxy
 
 <p align="center">
-  <a href="https://novixproxy.github.io/MTProto/">
-    <img src="novix-banner.png" alt="Novix Proxy - Telegram Web Proxy Directory" width="100%">
+  <a href="https://novixproxy.github.io/Free-Telegram-Proxy-List/">
+    <img src="novix-banner.png" alt="Novix Proxy - Free Telegram Proxy Directory" width="100%">
   </a>
 </p>
 
@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <a href="https://novixproxy.github.io/MTProto/">
+  <a href="https://novixproxy.github.io/Free-Telegram-Proxy-List/">
     <strong>🌐 OPEN LIVE WEBSITE</strong>
   </a>
 </p>
@@ -24,7 +24,7 @@
 
 ## ✨ About
 
-Novix Proxy is an open-source directory of public Telegram Web Proxy links, designed to help users discover available proxies and connect to Telegram easily.
+Novix Proxy is an open-source directory of free Telegram Web Proxy links, helping users discover available proxies and connect to Telegram easily.
 
 ## ⚡ Features
 
@@ -43,7 +43,7 @@ Novix Proxy is an open-source directory of public Telegram Web Proxy links, desi
 
 Explore Novix Proxy:
 
-> 🌐 **https://novixproxy.github.io/MTProto/**
+> 🌐 **[OPEN LIVE WEBSITE](https://novixproxy.github.io/Free-Telegram-Proxy-List/)**
 
 ## 🛠️ Technology
 
