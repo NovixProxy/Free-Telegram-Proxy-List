@@ -26,6 +26,8 @@
 
 Novix Proxy is an open-source directory of free Telegram Web Proxy links, helping users discover available proxies and connect to Telegram easily.
 
+---
+
 ## ⚡ Features
 
 - Automated HTTPS endpoint monitoring
