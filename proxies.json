@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T14:41:25.571381+00:00",
+  "updated_at": "2026-11-23T16:01:53.054581+00:00",
   "proxies": [
     {
       "id": "novix-de-01",
@@ -14,8 +14,8 @@
       "endpoint_status": "online",
       "tls_valid": true,
       "http_status": 200,
-      "latency_ms": 619,
-      "checked_at": "2026-11-23T14:41:24.237534+00:00"
+      "latency_ms": 1124,
+      "checked_at": "2026-11-23T16:01:50.875535+00:00"
     },
     {
       "id": "novix-de-02",
@@ -30,8 +30,8 @@
       "endpoint_status": "online",
       "tls_valid": true,
       "http_status": 200,
-      "latency_ms": 586,
-      "checked_at": "2026-11-23T14:41:24.857718+00:00"
+      "latency_ms": 798,
+      "checked_at": "2026-11-23T16:01:52.000050+00:00"
     },
     {
       "id": "novix-de-03",
@@ -47,7 +47,7 @@
       "tls_valid": false,
       "http_status": null,
       "latency_ms": null,
-      "checked_at": "2026-11-23T14:41:25.444721+00:00"
+      "checked_at": "2026-11-23T16:01:52.798863+00:00"
     },
     {
       "id": "novix-de-04",
@@ -59,11 +59,11 @@
       "pinned": true,
       "pin_order": 4,
       "connect_url": "https://t.me/webproxy?server=ketabkadeh.shop&secret=dd16ef59d9f5670307d8bf5074a8944e94",
-      "endpoint_status": "offline",
-      "tls_valid": false,
-      "http_status": null,
-      "latency_ms": null,
-      "checked_at": "2026-11-23T14:41:25.550131+00:00"
+      "endpoint_status": "online",
+      "tls_valid": true,
+      "http_status": 200,
+      "latency_ms": 237,
+      "checked_at": "2026-11-23T16:01:52.816732+00:00"
     }
   ]
 }
