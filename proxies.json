@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T17:28:26.357672+00:00",
+  "updated_at": "2026-11-23T18:26:27.470300+00:00",
   "proxies": [
     {
       "id": "novix-de-01",
@@ -14,8 +14,8 @@
       "endpoint_status": "online",
       "tls_valid": true,
       "http_status": 200,
-      "latency_ms": 609,
-      "checked_at": "2026-11-23T17:28:24.258561+00:00"
+      "latency_ms": 1161,
+      "checked_at": "2026-11-23T18:26:24.036579+00:00"
     },
     {
       "id": "novix-de-02",
@@ -30,8 +30,8 @@
       "endpoint_status": "online",
       "tls_valid": true,
       "http_status": 200,
-      "latency_ms": 700,
-      "checked_at": "2026-11-23T17:28:24.869440+00:00"
+      "latency_ms": 946,
+      "checked_at": "2026-11-23T18:26:25.197979+00:00"
     },
     {
       "id": "novix-de-03",
@@ -47,7 +47,7 @@
       "tls_valid": false,
       "http_status": null,
       "latency_ms": null,
-      "checked_at": "2026-11-23T17:28:25.570059+00:00"
+      "checked_at": "2026-11-23T18:26:26.145236+00:00"
     },
     {
       "id": "novix-de-04",
@@ -62,8 +62,8 @@
       "endpoint_status": "online",
       "tls_valid": true,
       "http_status": 200,
-      "latency_ms": 772,
-      "checked_at": "2026-11-23T17:28:25.584885+00:00"
+      "latency_ms": 1305,
+      "checked_at": "2026-11-23T18:26:26.164347+00:00"
     }
   ]
 }
